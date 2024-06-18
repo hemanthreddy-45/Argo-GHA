@@ -18,3 +18,10 @@ COPY --from=MAVEN_TOOL_CHAIN /app/target/*.jar /app/spring-boot-application.jar
 CMD ["java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "/app/spring-boot-application.jar"]
 # Optional: Add a health check to verify the application's health
 HEALTHCHECK --interval=1m --timeout=3s CMD wget -q -T 3 -s http://localhost:8080/actuator/health || exit 1
+
+
+
+
+
+
+
